@@ -1,6 +1,6 @@
 # Demande à l'utilisateur d'entrer son nom et l'affiche à l'écran ensuite
 
-username = input("Entrer votre prénom ")
+username = input("Entrer votre prénom ")  # retourne toujours un "str"
 
 print("Bonjour " + username)
 

@@ -3,21 +3,17 @@
 numero = 112
 text = "des urgences"
 
-print(f'le numero d\'appel {text} est le {numero}')
+print(f"Le numéro d'appel {text} est le {numero}")
 
-print(f'le numéro d\'appel {text} est le {numero}')
-
-print(f'le numéro d\'appel {text} est le {numero}')
-
-list = [1, 2, 3, 4, 5, 6]
+liste = [1, 2, 3, 4, 5, 6]
 
 i = 0
 
-while i < len(list):
-    print(list)
+while i < len(liste):
+    print(liste)
     i += 1
 
-for i in list:
+for i in liste:
     print(i)
 
 
