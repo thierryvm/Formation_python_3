@@ -37,7 +37,10 @@ def demander_nom():
     return reponse_nom
 
 
-def afficher_information_personne(nom, age):
+# taille ici est un paramètre optionnel on lui assigne la valeur de 0
+
+
+def afficher_information_personne(nom, age, taille=0):
     print()
     print(f"Vous vous appelez {nom} et vous avez {age} ans.")
     print(f"L'an prochain vous aurez {age + 1} ans.")
@@ -59,6 +62,9 @@ def afficher_information_personne(nom, age):
     else:
         print("Vous êtes mineur")
 
+    if not taille == 0:
+        print(f"Votre taille : {taille} m")
+
 
 nom1 = demander_nom()
 nom2 = demander_nom()
@@ -68,3 +74,17 @@ age2 = demander_age(nom2)
 
 afficher_information_personne(nom1, age1)
 afficher_information_personne(nom2, age2)
+
+NB_PERSONNES = 1  # Ajout d'une constante par convention, elle sont en majuscule et on ne les modifie jamais
+
+for i in range(0, NB_PERSONNES):
+    nom = "personne" + str(i + 1)
+    age = demander_age(nom)
+    afficher_information_personne(nom, age, 1.80)
+
+print("""
+Un print 
+    sur plusieurs
+                lignes
+
+""")
