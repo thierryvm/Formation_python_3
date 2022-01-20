@@ -2,10 +2,10 @@ from random import randint
 
 
 def demander_nombre():
-    global essais
     NOMBRE_ESSAIS = 10
     i = 0
-    NOMBRE_A_DEVINER = randint(1, 100)
+    NOMBRE_A_DEVINER: int = randint(1, 100)
+    essais = input(f'Entrez un nombre ({i + 1} essai): ')
     while i < NOMBRE_ESSAIS:
         try:
             essais = int(input(f'Entrez un nombre ({i + 1} essai): '))
@@ -27,3 +27,7 @@ def demander_nombre():
         print(f'Le nombre a deviner etait: {NOMBRE_A_DEVINER}')
 
     print('Fin du jeu.')
+
+
+# ------------------------------ Appel de la fonction -------------------
+demander_nombre()

@@ -25,8 +25,11 @@ def poser_question():
         calcul = a / b
     else:
         calcul = a + b
-
-    reponse = int(input(f"Calculez : {a} {operateur_str} {b} = "))
+    reponse = input(f"Calculez : {a} {operateur_str} {b} = ")
+    try:
+        reponse = int(reponse)
+    except ValueError:
+        print("Désolé, tu dois entrer un nombre !")
 
     return reponse == calcul
 
