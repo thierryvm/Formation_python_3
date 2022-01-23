@@ -31,6 +31,3 @@ def main():
 
     print('Fin du jeu.')
 
-
-if __name__ == '__main__':
-    main()
