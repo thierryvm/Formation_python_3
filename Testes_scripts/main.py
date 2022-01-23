@@ -37,7 +37,8 @@ apprendre la programmation"""
 
 """ 
 Je récupère les inforations en passant les paramètres de la fonction 
-recuperer_et_afficher_infos_personne(numero_personne)
+recuperer_et_afficher_infos_personne(numero_personne) 
+Ajout de la fonction est_majeur() pour comparer si l'age est majeur ou mineur
 """
 
 
