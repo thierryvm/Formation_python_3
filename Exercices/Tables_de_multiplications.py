@@ -27,3 +27,35 @@ while True:
         break
 
 table_de_multiplication(N, 10, 1)
+
+
+# autre façon de faire avec les callback
+
+def mult_callback(a, b):
+    return a * b
+
+
+def addition_callback(a, b):
+    return a + b
+
+
+def sustraction_callback(a, b):
+    return a - b
+
+
+def division_callback(a, b):
+    return a / b
+
+
+def afficher_table(n, operateur_str, operation_cbk):
+    for i in range(1, 10):
+        print(i, operateur_str, n, "=", operation_cbk(i, n))
+
+
+afficher_table(2, "x", mult_callback)
+print()
+afficher_table(2, "+", addition_callback)
+print()
+afficher_table(2, "-", sustraction_callback)
+print()
+afficher_table(2, "/", division_callback)
