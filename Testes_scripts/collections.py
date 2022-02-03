@@ -7,7 +7,6 @@
 a = 5
 b = "Toto"
 
-
 # ------------------------------ Tuples ----------------------------------
 
 # personnes = ("Mélanie", "Jean", "Martin", "Alice")
@@ -53,24 +52,34 @@ b = "Toto"
 # ------------------------------ Fonction et tuples ----------------------------------
 
 
-def obtenir_information():
-    return "Mélanie", 37, 1.60
+# def obtenir_information():
+#     return "Mélanie", 37, 1.60
+#
+#
+# def afficher_information(nom: str, age: int, taille: float):
+#     print(f"information : Nom: {nom}, age: {age}, taille: {taille}")
+#
+#
+# infos = obtenir_information()
+# afficher_information(*infos)
+#
+# print(infos)
+# print(*infos)  # ça revient à faire print(infos[0], info[1], infos[2]) ou on dit qu'on unpack
+#
+# # print("nom: ", infos[0])
+# # print("age: ", str(infos[1]))
+# # print("taille: ", str(infos[2]))
+#
+#
+# nom, age, taille = obtenir_information()
+# afficher_information(nom, age, taille)
 
 
-def afficher_information(nom: str, age: int, taille: float):
-    print(f"information : Nom: {nom}, age: {age}, taille: {taille}")
+# ------------------------------ Slices ----------------------------------
 
 
-infos = obtenir_information()
-afficher_information(*infos)
-
-print(infos)
-print(*infos)  # ça revient à faire print(infos[0], info[1], infos[2]) ou on dit qu'on unpack
-
-# print("nom: ", infos[0])
-# print("age: ", str(infos[1]))
-# print("taille: ", str(infos[2]))
+personnes = ["Mélanie", "Jean", "Martin", "Alice"]
 
 
-nom, age, taille = obtenir_information()
-afficher_information(nom, age, taille)
+for i in personnes[0:2]:
+    print(i)
