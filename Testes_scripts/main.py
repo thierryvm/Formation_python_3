@@ -57,7 +57,7 @@ def recuperer_infos_personne(numero_personne):
     return nom_personne, int(age_personne)
 
 
-def afficher_infos_personnes(numero_personne, nom, age: int):
+def afficher_infos_personnes(numero_personne, nom, age):
     print(f"La personne {numero_personne} est {nom}, son age est {age} ans")
     print(f"Le nom possède {len(nom)} caractères")
     if est_majeur(age):
