@@ -24,7 +24,7 @@ def afficher(collection, n_premiers_elements=-1):
 
 
 def ajouter_pizza_utilisateur(collection):
-    p: str = input("Pizza à ajouter: ").lower()
+    p: str = input("Pizza à ajouter: ").upper()
     if p in collection:
         print("ERREUR : Cette pizza existe déjà")
     else:
