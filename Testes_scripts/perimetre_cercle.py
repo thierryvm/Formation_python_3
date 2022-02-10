@@ -14,3 +14,7 @@ print(perimetre)
 
 aire = aire_cercle(1)
 print(aire)
+
+
+reponse = 8958937768937 / 2851718461558
+print(reponse)
