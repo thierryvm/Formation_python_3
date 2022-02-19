@@ -22,11 +22,11 @@ def table_de_multiplication(n, min=1, max=10):
 
 
 while True:
-    N = int(input("Veuillez saisir un nombre : "))
+    N = float(input("Veuillez saisir un nombre : "))
     if N > 0:
         break
 
-table_de_multiplication(N, 10, 1)
+table_de_multiplication(N, 1, 10)
 
 
 # autre façon de faire avec les callback
@@ -47,15 +47,15 @@ def division_callback(a, b):
     return a / b
 
 
-def afficher_table(n, operateur_str, operation_cbk):
+def afficher_table(operateur_str, operation_cbk):
     for i in range(1, 10):
-        print(i, operateur_str, n, "=", operation_cbk(i, n))
+        print(i, operateur_str, N, "=", operation_cbk(i, N))
 
 
-afficher_table(2, "x", mult_callback)
+# afficher_table("x", mult_callback)
 print()
-afficher_table(2, "+", addition_callback)
+afficher_table("+", addition_callback)
 print()
-afficher_table(2, "-", sustraction_callback)
+afficher_table("-", sustraction_callback)
 print()
-afficher_table(2, "/", division_callback)
+afficher_table(":", division_callback)
