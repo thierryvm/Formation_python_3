@@ -5,7 +5,7 @@ from random import randint
 
 
 def main():
-    global essais
+    essais: int = 0
     NOMBRE_ESSAIS = 10
     i = 0
     NOMBRE_A_DEVINER = randint(1, 100)
@@ -31,3 +31,5 @@ def main():
 
     print('Fin du jeu.')
 
+
+main()
