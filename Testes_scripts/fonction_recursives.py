@@ -1,6 +1,6 @@
 """
-Les fonctions récursives permette de boucler sur elle même, comme par exemple demander un utilisateur d'entrer un choix
-ou dans le premier cas calculer une puissance
+Les fonctions récursives permettent de boucler sur elle-même, par exemple demander un utilisateur d'entrer un
+choix ou dans le premier cas calculer une puissance.
 """
 
 

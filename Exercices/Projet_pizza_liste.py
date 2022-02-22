@@ -6,7 +6,7 @@ def tri_personnalise(e):
 
 def afficher(collection, n_premiers_elements=-1):
     c = collection
-    if not n_premiers_elements == -1:
+    if n_premiers_elements != -1:   # Simplification de la condition if not n_premiers_elements == 1
         c = collection[:n_premiers_elements]
 
     c.sort(key=tri_personnalise)

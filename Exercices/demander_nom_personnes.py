@@ -1,6 +1,3 @@
-# Listes - Exercice : Demander nom de personnes
-
-
 noms = []
 
 
@@ -15,4 +12,4 @@ print()
 print("Nom de la personne: ")
 noms.sort()
 for nom in noms:
-    print(" " + nom)
+    print(f' {nom}')
