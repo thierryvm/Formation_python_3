@@ -2,10 +2,11 @@ from random import randint
 
 
 def demander_nombre():
+    essais = 0
     NOMBRE_ESSAIS = 10
     i = 0
-    NOMBRE_A_DEVINER: int = randint(1, 100)
-    essais = input(f'Entrez un nombre ({i + 1} essai): ')
+    NOMBRE_A_DEVINER = randint(1, 100)
+    # essais = input(f'Entrez un nombre ({i + 1} essai): ')
     while i < NOMBRE_ESSAIS:
         try:
             essais = int(input(f'Entrez un nombre ({i + 1} essai): '))
