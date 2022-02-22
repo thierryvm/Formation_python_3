@@ -6,10 +6,7 @@ def somme(titre, **nombres):
     :return: les paramètres titre et **nombres et on ajoute dans la boucle .value() pour pouvoir utiliser les clés
     """
     print("TITRE:", titre)
-    resultat = 0
-    for n in nombres.values():
-        resultat += n
-    return resultat
+    return sum(nombres.values())
 
 
 print(somme("La moyenne de vos notes est de :", math=5, geo=10, anglais=4))

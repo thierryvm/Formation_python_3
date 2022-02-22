@@ -81,5 +81,5 @@ b = "Toto"
 personnes = ["Mélanie", "Jean", "Martin", "Alice"]
 
 
-for i in personnes[0:2]:
+for i in personnes[:2]:
     print(i)
