@@ -24,7 +24,7 @@ def poser_question(question, r1, r2, r3, r4, choix_bonne_reponse):
     print(" (c)", r3)
     print(" (d)", r4)
 
-    reponse = input("Entré votre réponse: ")
+    reponse = input("Entré votre réponse: ").lower()
     if reponse == choix_bonne_reponse:
         print("Bonne réponse")
         score += 1
