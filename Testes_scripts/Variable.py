@@ -1,8 +1,6 @@
-# Demande à l'utilisateur d'entrer son nom et l'affiche à l'écran ensuite
-
 username = input("Entrer votre prénom ")  # retourne toujours un "str"
 
-print("Bonjour " + username)
+print(f'Bonjour {username}')
 
 # Demande à l'utilisateur d'introduire les 3 notes et en fait la moyenne /3 pour l'afficher ensuite.
 
