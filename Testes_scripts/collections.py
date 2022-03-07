@@ -1,9 +1,3 @@
-# Collections : (Tableaux : Array), Listes, Tuples ....
-# Contenir et gérer plusieurs éléments
-# Tuple (): immutable -> Non modifiable
-# Liste []: mutable -> modifiable : rajouter/supprimer des éléments ou les modifier
-
-
 a = 5
 b = "Toto"
 
@@ -81,5 +75,5 @@ b = "Toto"
 personnes = ["Mélanie", "Jean", "Martin", "Alice"]
 
 
-for i in personnes[0:2]:
+for i in personnes[:2]:
     print(i)
