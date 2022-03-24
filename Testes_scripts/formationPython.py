@@ -7,12 +7,8 @@ print(f"Le numéro d'appel {text} est le {numero}")
 
 liste = [1, 2, 3, 4, 5, 6]
 
-i = 0
-
-while i < len(liste):
+for item in liste:
     print(liste)
-    i += 1
-
 for i in liste:
     print(i)
 

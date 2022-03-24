@@ -36,7 +36,7 @@ def poser_question():
 
 nb_points = 0
 
-for i in range(0, NB_QUESTIONS):
+for i in range(NB_QUESTIONS):
     print(f"Question n° {i + 1} sur {NB_QUESTIONS} : ")
     if poser_question():
         print("Réponse correcte")

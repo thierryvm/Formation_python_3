@@ -37,6 +37,7 @@
 """
 Beaucoup plus puissant, car pas besoin de bouclier un nombre de fois par clés
 """
+
 personnes_dict = {
     "Mélanie": (25, 1.6),
     "Paul": (29, 1.8),
@@ -44,9 +45,7 @@ personnes_dict = {
     "Martin": (16, 1.65)
 }
 
-infos = personnes_dict.get("Jacques")  # En ajoutant .get permet de vérifier l'existance et si n'existe pas renvoie None
-
-if not infos:
-    print("La clef n'existe pas")
-else:
+if infos := personnes_dict.get("Jacques"):
     print(infos)
+else:
+    print("La clef n'existe pas")
