@@ -20,7 +20,7 @@ def demander_reponse_numerique_utlisateur(min, max):
     # reponse_str = input("Votre réponse (entre " + str(min) + " et " + str(max) + ") :")
     reponse = int(input(f"Votre réponse (entre {min} et {max} : )"))
     try:
-        reponse_int = int(reponse)
+        reponse_int = reponse
         if min <= reponse_int <= max:
             return reponse_int
 
