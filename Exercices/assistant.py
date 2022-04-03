@@ -119,30 +119,39 @@ def greetMe():
         talk('Bonsoir Thierry!')
 
 
+debug = 1
+
 # set french voice
 engine.setProperty('voice', 'com.apple.speech.synthesis.voice.french.premiere')
-greetMe()
-engine.say('comment vas tu?')
-# engine.say('Que puis-je faire pour t'aider ?')
-engine.runAndWait()
+if debug == 0:
+    greetMe()
+    engine.say('comment vas tu?')
+    engine.say("Que puis-je faire pour t'aider ?")
+    engine.runAndWait()
 
 
-def alexa_command():
+def get_input_microphone():
     with sr.Microphone() as source:
         print("listening...")
-        listener.pause_threshold = 0.5
+        listener.pause_threshold = 5
         voice = listener.listen(source)
         command = listener.recognize_google(voice, language="fr-FR")
         command = command.lower()
         print(command)
-        if 'alexa' in command:
-            command = command.replace('alexa', '')
-            print(command)
     return command
 
 
+def is_assistant_command(command):
+    split_command = command.split()
+    print(split_command)
+    for index in range(len(split_command)):
+        print(split_command[index])
+        return split_command[index] == "alexa"
+
+
 def run_alexa():  # sourcery no-metrics
-    command = alexa_command()
+    command = get_input_microphone()
+    is_assistant_command(command)
     if 'musique' in command:
         song = command.replace('musique', '')
         talk('musique en cours....')
@@ -166,7 +175,7 @@ def run_alexa():  # sourcery no-metrics
         webbrowser.open(f'https://youtube.com/results?search_query={search}')
     elif 'ouvre coda' in command:
         webbrowser.open('https://www.coda.io')
-    elif 'ouvre Notion' in command:
+    elif 'ouvre notion' in command:
         webbrowser.open('https://www.notion.so/Dashboard-51614fc1cfae4f03ae360015a3e775d2')
     elif 'ouvre github' in command:
         webbrowser.open('https://github.com')
@@ -193,7 +202,7 @@ def run_alexa():  # sourcery no-metrics
             "C’est l’histoire de la maîtresse qui demande à Toto : « Récite-moi le verbe marcher au présent. » Toto "
             "répond ",
             "« Je…marche…tu…tu…marches… », mais la maîtresse le presse, allez, plus vite Toto ! "
-            "Ce à quoi il répond « je cours ..…tu cours il court… »",]
+            "Ce à quoi il répond « je cours ..…tu cours il court… »", ]
         talk(random.choice(jokes))
     elif "et toi" in command:
         msgs = ["Je fais juste mon truc !", "Je vais bien !", "Bien !", "Je suis bien et plein d'énergie."]
