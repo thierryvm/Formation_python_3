@@ -1,0 +1,7 @@
+nav:
+  Home: index.md
+  About: about.md
+  Documentation:
+    Getting Started: docs/getting-started.md
+    Configuration: docs/configuration.md
+    Customization: docs/customization.md

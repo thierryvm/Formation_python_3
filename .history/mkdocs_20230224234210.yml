@@ -1,0 +1,33 @@
+site_name: Formations
+site_url: http://formations.be
+repo_url: https://github.com/ultrabug/mkdocs-static-i18n
+
+extra_css:
+    - stylesheets/extra.css
+
+nav:
+    - Accueil: index.md
+    - À Propos: about.md
+    - Catégories:
+          - HTML5: html5.md
+          - CSS3: css3.md
+          - JavaScript: javascript.md
+    - Contact: contact.md
+    - Documentation:
+          - Guide de démarrage: docs/getting-started.md
+          - Configuration: docs/configuration.md
+          - Personnalisation: docs/customization.md
+
+theme:
+    name: material
+    font: Roboto
+    language: Fr
+    palette:
+        primary: "null"
+        accent: light green
+
+markdown_extensions:
+    - admonition
+
+plugins:
+    - search

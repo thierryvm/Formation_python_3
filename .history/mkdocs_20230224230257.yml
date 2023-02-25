@@ -1,0 +1,32 @@
+site_name: Formations
+site_url: http://formations.be
+site_encoding: utf-8
+
+extra_css:
+    - stylesheets/extra.css
+
+nav:
+    - Home: index.md
+    - A Propos: about.md
+    - HTML5:
+          - html5.md
+    - CSS3:
+          - css3.md
+    - JavaScript:
+          - javascript.md
+    - Contact: contact.md
+
+theme:
+    name: material
+    palette:
+        primary: "green"
+        accent: "light green"
+
+plugins:
+    - search
+    - mkdocs-i18n:
+      default_language: fr
+      languages:
+          - fr
+          - en
+      use_directory_urls: true

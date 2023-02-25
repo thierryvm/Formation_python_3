@@ -1,0 +1,47 @@
+site_name: Formations
+site_url: http://formations.be
+repo_url: https://github.com/thierryvm
+
+extra_css:
+    - stylesheets/extra.css
+
+nav:
+    - Accueil: index.md
+    - À Propos: about.md
+    - Catégories:
+          - HTML5: html5.md
+          - CSS3: css3.md
+          - JavaScript: javascript.md
+    - Contact: contact.md
+    - Documentation:
+          - Guide de démarrage: getting-started.md
+          - Configuration: docs/configuration.md
+          - Personnalisation: docs/customization.md
+
+theme:
+    name: material
+    font: Roboto
+    language: Fr
+    palette:
+        primary: green
+        accent: light green
+
+markdown_extensions:
+    - admonition
+    - abbr
+    - attr_list
+    - codehilite
+    - def_list
+    - fenced_code
+    - footnotes
+    - tables
+    - md_in_html
+    - meta
+    - nl2br
+    - sane_lists
+    - smarty
+    - toc
+    - wikilinks
+
+plugins:
+    - search
